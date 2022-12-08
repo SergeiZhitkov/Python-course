@@ -1,2 +1,2 @@
-message = input("String pls").lower()
+message = input("String pls: ").lower()
 print(message)
