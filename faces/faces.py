@@ -7,10 +7,10 @@ def main():
 
 
 
-def convert():
-    message = message.replace(":)","🙂")
-    message = message.replace(":(", "🙁")
-
+def convert(m):
+    m = m.replace(":)","🙂")
+    m = m.replace(":(", "🙁")
+    return m
 
 
 
