@@ -1,1 +1,3 @@
-message = input("")
+message = input()
+message = message.replace(" ", "...")
+print(message)
