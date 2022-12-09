@@ -10,7 +10,7 @@ def dollar_gives(g):
         p = p + letter
     if p == "hello":
         return "$0"
-    elif p == "h":
+    elif p[0] == "h":
         return "$20"
     return "$100"
 
