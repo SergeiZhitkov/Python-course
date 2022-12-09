@@ -1,5 +1,5 @@
 def main():
-    expression = input().strip()
+    expression = input("Enter your expression").strip()
     print(cal(expression))
 
 
