@@ -1,5 +1,5 @@
 def main():
-    answer = input("What is the Answer to the Great Question of Life, The Universe and Everything? ").lower()
+    answer = input("What is the Answer to the Great Question of Life, The Universe and Everything? ").lower().strip(check50 cs50/problems/2022/python/deepcheck50 cs50/problems/2022/python/deep)
     print(is_right(answer))
 
 
