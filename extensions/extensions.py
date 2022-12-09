@@ -7,6 +7,7 @@ def main():
 
 
 def file_extension(f):
+    suffix = ""
     extensions = {
         ".gif" : "image/gif",
         ".jpg" : "image/jpeg",
@@ -17,8 +18,11 @@ def file_extension(f):
         ".zip" : "application/zip",
        }
     if f.endswith(".gif", ".jpg", ".jpeg", ".png", ".pdf", ".txt", ".zip"):
-        for letter in f(-1 : -)
-
+        f = f.replace("jpeg", "jpg")
+        for letter in f[-1 : -4]:
+            suffix = suffix + letter
+        return extensions[suffix]
+    return "application/octet-stream"
 
 
 
