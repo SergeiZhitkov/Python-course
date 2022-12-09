@@ -1,7 +1,7 @@
 
 
 def main():
-    file = input("File name: ")
+    file = input("File name: ").strip().lower()
     print(file_extension(file))
 
 
