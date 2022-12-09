@@ -6,15 +6,10 @@ def main():
 
 def dollar_gives(g):
     words = g.split(" ")
-    for word in words:
-        if words[0] == "hello":
-            return "$0"
-        elif word[0] == "h":
-            return "$20"
-        else:
-            return "$0"
-
-
+    p = ""
+    for letter in words[0]:
+        p = p + letter
+    if p == "hello"
 
 
 if __name__ == "__main__":
