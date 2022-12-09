@@ -17,7 +17,7 @@ def file_extension(f):
         ".zip" : "application/zip",
        }
     if f.endswith(".gif", ".jpg", ".jpeg", ".png", ".pdf", ".txt", ".zip"):
-        for letter in f(len(f) : )
+        for letter in f(-1 : -)
 
 
 
