@@ -8,7 +8,7 @@ def dollar_gives(g):
     words = g.split(" ")
     p = ""
     for word in words[0]:
-        for letter in word[0:4]:
+        for letter in word[0:5]:
             p = p + letter
     if p == "hello":
         return "$0"
