@@ -19,7 +19,8 @@ def is_valid(s):
                     if letter.isnumeric():
                         i += 1
                         continue
-                
+                    else:
+                        return False
                 return True
             else:
                 return False
