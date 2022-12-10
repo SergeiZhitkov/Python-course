@@ -9,7 +9,7 @@ def main():
 def calorie_cal(f):
     rfl = {
         "apple" : 130,
-        "avocado california" : 50,
+        "avocado" : 50,
         "banana" : 110,
         "cantaloupe" : 50,
         "grapefruit" : 60,
