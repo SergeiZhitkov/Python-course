@@ -1,10 +1,19 @@
 def main():
     message = input("Enter your message: ").strip()
-    omitting_vowels(message)
+    print(omitting_vowels(message))
 
 
 
 
 def omitting_vowels(m):
-    for letter in m:
-        if letter in "aeiouAEIOU":
+    ov = ""
+    for letter  in m:
+        if letter not in "aeiouAEIOU":
+            ov = ov + letter
+    return ov
+
+
+
+
+if __name__ == "__main__":
+    main()
