@@ -1,7 +1,7 @@
 def main():
     fruit = input("Item: ").strip().lower()
     print(calorie_cal(fruit))
-
+    
 
 
 
