@@ -1,3 +1,4 @@
+import math
 def main():
     cost = 50
     while True:
