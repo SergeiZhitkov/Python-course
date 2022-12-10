@@ -2,7 +2,8 @@ def main():
     cost = 50
     while True:
         if cost <= 0:
-            print("Change Owed")
+            print(f"Change Owed: {abs(cost)}")
+            break
         print(f"Amount Due: {cost}")
         coin = int(input("Insert Coin: "))
         if check_coin(coin):
