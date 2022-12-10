@@ -13,14 +13,12 @@ def is_valid(s):
             if letter.isalpha():
                 i += 1
                 continue
-            elif letter.isnumeric() and letter != 0:
+            elif letter.isnumeric() and letter != '0':
                 i += 1
                 for letter in s[i:]:
                     if letter.isnumeric():
                         i += 1
                         continue
-                    else:
-                        return False
                 return True
             else:
                 return False
