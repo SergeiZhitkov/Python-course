@@ -9,9 +9,8 @@ def main():
 
 def convert(t):
     hour, minut = t.split(":")
-    hour = float(hour)
     minut = float(minut) / 60
-    return hour + minut
+    return float(hour) + minut
 
 
 if __name__ == "__main__":
