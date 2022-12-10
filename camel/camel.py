@@ -6,8 +6,13 @@ def main():
 
 
 def camel_to_snake(c):
+    s = ""
     for letter in c:
-        if letter.isalpha()
+        if letter.isupper():
+            s = s + "_" + letter.lower()
+        else:
+            s = s + letter
+    return s
 
 
 
