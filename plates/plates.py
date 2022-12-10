@@ -20,8 +20,8 @@ def is_valid(s):
                         continue
                     else:
                         return False
-            else:
-                return False
+                else:
+                    return False
         return True
     else:
         return False
