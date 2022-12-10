@@ -9,8 +9,8 @@ def main():
 def is_valid(s):
     i = 0
     if 1 < len(s) < 7:
-        for letter in s[1:]:
-            if letter.isalpha() and s[i].isalpha():
+        for letter in s:
+            if letter.isalpha():
                 i += 1
                 continue
             elif letter.isnumeric() and letter != 0:
