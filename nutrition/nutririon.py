@@ -6,7 +6,15 @@ def main():
 
 
 def calorie_cal(f):
-    
+    rfl = {
+        "apple" : 
+
+
+
+
+
+
+    }
 
 
 
