@@ -1,7 +1,13 @@
+import sys
 def main():
     while True:
-        item = input("Item: ").strip().lower()
-        
+        try:
+            item = input("Item: ").strip().lower()
+        except EOFError:
+            sys.exit()
+
+
+
 
 
 
@@ -16,3 +22,9 @@ def main():
     "Taco": 3.00,
     "Tortilla Salad": 8.00
 }
+
+
+
+
+if __name__ == "__main__":
+    main()
