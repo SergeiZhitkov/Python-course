@@ -32,9 +32,9 @@ while True:
         for i in range(len(months)):
             if month == months[i]:
                 month = i + 1
-        day = day.replace(",", "")
-        day = int(day)
-        if 0 < day < 32:
-            print(f"{year}-{month:02}-{day:02}")
+                day = day.replace(",", "")
+                day = int(day)
+                if 0 < day < 32:
+                    print(f"{year}-{month:02}-{day:02}")
     except (ValueError):
         pass
