@@ -1,7 +1,7 @@
 import sys
 total = 0
 menu = {
-    "taja taco": 4.00,
+    "baja taco": 4.00,
     "burrito": 7.50,
     "bowl": 8.50,
     "nachos": 11.00,
