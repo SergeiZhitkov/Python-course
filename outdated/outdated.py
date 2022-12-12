@@ -21,7 +21,6 @@ while True:
             month, day, year = date.split("/")
             month = int(month)
             day = int(day)
-            year = int(year)
             if 0 < month < 13:
                 if 0 < day < 32:
                     print(f"{year}-{month:02}-{day:02}")
