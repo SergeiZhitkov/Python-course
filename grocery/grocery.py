@@ -1,1 +1,4 @@
-items = 
+items = [
+    {item: "", value: ""}
+    
+]
