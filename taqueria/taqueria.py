@@ -1,30 +1,23 @@
 import sys
-def main():
-    while True:
-        try:
-            item = input("Item: ").strip().lower()
-        except EOFError:
-            sys.exit()
-
-
-
-
-
-
-{
-    "Baja Taco": 4.00,
-    "Burrito": 7.50,
-    "Bowl": 8.50,
-    "Nachos": 11.00,
-    "Quesadilla": 8.50,
-    "Super Burrito": 8.50,
-    "Super Quesadilla": 9.50,
-    "Taco": 3.00,
-    "Tortilla Salad": 8.00
-}
-
-
-
-
-if __name__ == "__main__":
-    main()
+total = 0
+menu = {
+    "taja taco": 4.00,
+    "burrito": 7.50,
+    "bowl": 8.50,
+    "nachos": 11.00,
+    "quesadilla": 8.50,
+    "super burrito": 8.50,
+    "super quesadilla": 9.50,
+    "taco": 3.00,
+    "tortilla salad": 8.00
+    }
+while True:
+    try:
+        item = input("Item: ").lower().strip()
+    except EOFError:
+        sys.exit()
+    try:
+        total = total + menu[item]
+        print(f"Total: ${total}")
+    except KeyError:
+        pass
