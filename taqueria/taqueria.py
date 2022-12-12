@@ -1,4 +1,7 @@
-
+def main():
+    while True:
+        item = input("Item: ").strip().lower()
+        
 
 
 
