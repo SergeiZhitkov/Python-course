@@ -1,10 +1,14 @@
 import sys
-items = [
-]
+items = {}
 while True:
     try:
         item = input("").lower().strip()
     except EOFError:
+        for key, value in items.items():
+            print(value, item.upper())
         sys.exit()
-    items[item] = 1
-    print(items[item])
+    try:
+        if items[item]:
+            items[item] += 1
+    except KeyError:
+        items[item] = 1
