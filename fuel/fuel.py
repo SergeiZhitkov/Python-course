@@ -15,7 +15,6 @@ def percentage(f):
             x = int(x)
             y = int(y)
             if x <= y and y != 0:
-                f = float(x) / float(y) * 100\
                 return float(x) / float(y) * 100
         except (ValueError, ZeroDivisionError):
             f = input("Fraction: ").strip()
