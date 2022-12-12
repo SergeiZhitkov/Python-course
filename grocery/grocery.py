@@ -4,8 +4,8 @@ while True:
     try:
         item = input("").lower().strip()
     except EOFError:
-        for key, value in items.items():
-            print(value, item.upper())
+        for key, value in sorted(items.items()):
+            print(value, key.upper())
         sys.exit()
     try:
         if items[item]:
