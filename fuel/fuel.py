@@ -1,20 +1,20 @@
 def main():
+    fraction = input("Fraction: ").strip()
+    percentage(fraction)
+    print(f"{fraction}%")
+
+
+def percentage(f):
     while True:
         try:
-            fraction = input("Fraction: ").strip()
-            x, y = fraction.split("/")
+            x, y = f.split("/")
             x = int(x)
             y = int(y)
-            break
-        except:
+            if x <= y and y != 0:
+                return float(x)/float(y) * 100
+        except (ValueError, ZeroDivisionError):
+            f = input("Fraction: ").strip()
             pass
-    
-
-
-
-def
-
-
 
 
 
