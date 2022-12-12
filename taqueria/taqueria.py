@@ -18,6 +18,6 @@ while True:
         sys.exit()
     try:
         total = total + menu[item]
-        print(f"Total: ${total}")
+        print(f"Total: ${total:.2f}")
     except KeyError:
         pass
