@@ -31,10 +31,11 @@ while True:
     try:
         month, day, year = date.split(" ")
         month = months.index(month) + 1
-        day = day.replace(",", "")
-        day = int(day)
-        if 0 < day < 32:
-            print(f"{year}-{month:02}-{day:02}")
-            break
+        if "," in day:
+            day = day.replace(",", "")
+            day = int(day)
+            if 0 < day < 32:
+                print(f"{year}-{month:02}-{day:02}")
+                break
     except (ValueError):
         pass
