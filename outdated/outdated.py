@@ -36,5 +36,6 @@ while True:
                 day = int(day)
                 if 0 < day < 32:
                     print(f"{year}-{month:02}-{day:02}")
+                    break
     except (ValueError):
         pass
