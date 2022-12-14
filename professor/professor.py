@@ -15,7 +15,8 @@ def get_level():
             pass
 
 def generate_integer(level):
-    if level 
+    if level < 1 or level > 3:
+        raise ValueError
 
 
 if __name__ == "__main__":
