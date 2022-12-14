@@ -17,7 +17,7 @@ def main():
                 break
             else:
                 print("EEE")
-        print(f"{x} + {y} = {x+y}")
+            print(f"{x} + {y} = {x+y}")
     print("Score:", score)
 
 
