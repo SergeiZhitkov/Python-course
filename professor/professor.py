@@ -34,7 +34,7 @@ def generate_integer(level):
                 else:
                     print("EEE")
                 print(f"{x} + {y} = {x+y}")
-        print(score)
+        print("Score:", score)
 
 
 
