@@ -11,4 +11,16 @@ while True:
         pass
 
 
-answer = random.rangint(1, leel)
+answer = random.randint(1, level)
+while True:
+    try:
+        guess = int(input("Guess: "))
+        if guess < answer:
+            print("Too small!")
+        elif guess > answe:
+            print("Too large!")
+        else:
+            print("Just right!")
+            break
+    except ValueError:
+        pass
