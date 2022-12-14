@@ -24,7 +24,7 @@ def generate_integer(level):
             y = random.randint(1, 10)
             for _ in range(3):
                 answer = input(f"{x} + {y} = ")
-                if answer == x + y:
+                if answer == (x + y):
                     score += 1
                     break
                 else:
