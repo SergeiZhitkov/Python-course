@@ -9,6 +9,9 @@ while True:
     try:
         name = input("Name: ")
     except EOFError:
-        for name in names:
-        print("Adieu, adieu, to", )
+        print("Adieu, adieu, to ", end="")
+        for name in names[:-1]:
+            print(f"{name},", end="")
+        print(f"and {names[len(names)-1]}")
         sys.exit()
+    names.append(name)
