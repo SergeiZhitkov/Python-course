@@ -1,10 +1,9 @@
 import requests
 import sys
 
-
-if len(sys.argv) != 2:
-    sys.exit()
 try:
-    value = float(sys.argv[1])
-except ValueError:
-    sys.exit()
+    value = (sys.argv[1])
+except (IndexError):
+    sys.exit("Missing command-line argument")
+try:
+    sys.exit("Missing command-line argument")
