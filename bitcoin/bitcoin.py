@@ -14,5 +14,5 @@ except ValueError:
 response = requests.get("https://api.coindesk.com/v1/bpi/currentprice.json")
 o = response.json()
 # print(json.dumps(response.json(), indent=2))
-for _ in o["bpi"]:
-    print(_["rate"])
+for result in o["bpi"]:
+    print(result['rate'])
