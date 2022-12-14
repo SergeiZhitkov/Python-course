@@ -15,6 +15,6 @@ response = requests.get("https://api.coindesk.com/v1/bpi/currentprice.json")
 # print(json.dumps(response.json(), indent=2))
 response = response.json()
 result = float(response["bpi"]["USD"]["rate_float"])
-print(result * value)
+print(f"${result * value:,.4f}")
 #for valute in response["bpi"]:
  #   print()
