@@ -12,7 +12,10 @@ if len(sys.argv) == 1:
     print(figlet.renderText(s))
 elif len(sys.argv) == 3:
     if sys.argv[1] == "-f" or "--font":
-        figlet.setFont(font=sys.argv[2])
+        try:
+            figlet.setFont(font=sys.argv[2])
+        except FontNotFound:
+            sys.exit()
         s = input("Input: ")
         print(figlet.renderText(s))
 else:
