@@ -17,6 +17,7 @@ def main():
             except ValueError:
                 print("EEE")
                 pass
+        print(f"{x} + {y} = {x+y}")
     print("Score:", score)
 
 
