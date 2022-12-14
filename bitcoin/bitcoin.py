@@ -6,4 +6,6 @@ try:
 except (IndexError):
     sys.exit("Missing command-line argument")
 try:
-    sys.exit("Missing command-line argument")
+    value = float(value)
+except ValueError:
+    sys.exit("Command-line argument is not a number")
