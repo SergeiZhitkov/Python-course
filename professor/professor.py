@@ -6,12 +6,17 @@ def main():
     level = get_level()
     for _ in range(10):
         x, y = generate_integer(level)
-        try:
-            answer = int(input(f"{x} + {y} = "))
-        except ValueError:
-            print("EEE")
-            pass
-        
+        for _ in range(3):
+            try:
+                answer = int(input(f"{x} + {y} = "))
+                if answer == (x + y):
+                    score += 1
+                    break
+                else:
+                    print("EEE")
+            except ValueError:
+                print("EEE")
+                pass
     print("Score:", score)
 
 
