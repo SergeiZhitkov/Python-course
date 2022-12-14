@@ -9,6 +9,6 @@ while True:
     try:
         name = input("Name: ")
     except EOFError:
-        print("")
+        for name in names:
+        print("Adieu, adieu, to", )
         sys.exit()
-    
