@@ -9,14 +9,14 @@ def main():
         for _ in range(3):
             try:
                 answer = int(input(f"{x} + {y} = "))
+                if answer == (x + y):
+                    score += 1
+                    break
+                else:
+                    print("EEE")
             except ValueError:
                 print("EEE")
-                break
-            if answer == (x + y):
-                score += 1
-                break
-            else:
-                print("EEE")
+                pass
         print(f"{x} + {y} = {x+y}")
     print("Score:", score)
 
