@@ -8,13 +8,10 @@ def main():
         x, y = generate_integer(level)
         try:
             answer = int(input(f"{x} + {y} = "))
-            if answer == (x + y):
-                score += 1
-            else:
-                print("EEE")
         except ValueError:
             print("EEE")
             pass
+        
     print("Score:", score)
 
 
