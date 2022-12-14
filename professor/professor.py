@@ -6,7 +6,7 @@ def main():
     level = get_level()
     for _ in range(10):
         x, y = generate_integer(level)
-        for _ in range(3):
+        for i in range(3):
             try:
                 answer = int(input(f"{x} + {y} = "))
                 if answer == (x + y):
@@ -17,7 +17,8 @@ def main():
             except ValueError:
                 print("EEE")
                 pass
-            print(f"{x} + {y} = {x+y}")
+            if i == 2:
+                print(f"{x} + {y} = {x+y}")
     print("Score:", score)
 
 
