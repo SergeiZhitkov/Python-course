@@ -18,5 +18,7 @@ elif len(sys.argv) == 3:
             sys.exit()
         s = input("Input: ")
         print(figlet.renderText(s))
+    else:
+        sys.exit()
 else:
     sys.exit()
