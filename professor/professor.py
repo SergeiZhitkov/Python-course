@@ -18,7 +18,7 @@ def main():
             else:
                 print("EEE")
             print(f"{x} + {y} = {x+y}")
-        print("Score:", score)
+    print("Score:", score)
 
 
 def get_level():
@@ -31,15 +31,13 @@ def get_level():
             pass
 
 def generate_integer(level):
-    if level < 1 or level > 3:
-        raise ValueError
     if level == 1:
         return (random.randint(1, 9), random.randint(1, 9))
     elif level == 2:
         return (random.randint(1, 99), random.randint(1, 99))
     elif level == 3:
         return (random.randint(1, 999), random.randint(1, 999))
-
+    raise ValueError
 
 
 if __name__ == "__main__":
