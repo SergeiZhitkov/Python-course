@@ -23,7 +23,11 @@ def generate_integer(level):
             x = random.randint(1, 10)
             y = random.randint(1, 10)
             for _ in range(3):
-                answer = input(f"{x} + {y} = ")
+                try:
+                    answer = int(input(f"{x} + {y} = "))
+                except ValueError:
+                    print("EEE")
+                    pass
                 if answer == (x + y):
                     score += 1
                     break
