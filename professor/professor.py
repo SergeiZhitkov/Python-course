@@ -15,8 +15,24 @@ def get_level():
             pass
 
 def generate_integer(level):
+    score = 0
     if level < 1 or level > 3:
         raise ValueError
+    if level == 1:
+        for _ in range(10):
+            x = random.randint(1, 10)
+            y = random.randint(1, 10)
+            for _ in range(3):
+                answer = input(f"{x} + {y} = ")
+                if answer == x + y:
+                    score += 1
+                    break
+                else:
+                    print("EEE")
+                print(f"{x} + {y} = {x+y}")
+
+
+
 
 
 if __name__ == "__main__":
