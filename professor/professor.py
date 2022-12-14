@@ -11,7 +11,7 @@ def main():
                 answer = int(input(f"{x} + {y} = "))
             except ValueError:
                 print("EEE")
-                pass
+                break
             if answer == (x + y):
                 score += 1
                 break
