@@ -16,5 +16,5 @@ def test_without_first_h():
 def test_with_numbers():
     assert value("01234Hello") == "$100"
 
-def test_with_punctuations():
+def test_with_punctuations():c
     assert value("__Hello, Jhon") == "$100"
