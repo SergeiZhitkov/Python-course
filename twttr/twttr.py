@@ -14,7 +14,7 @@ def shorten(word):
                 ov = ov + letter
         return ov
     else:
-        raise("ValueError")
+        raise("TypeError")
         sys.exit()
 
 
