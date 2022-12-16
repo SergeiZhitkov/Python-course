@@ -7,5 +7,3 @@ def test_word_with_vowels():
 def test_word_without_vowels():
     assert shorten("Gym") == "Gym"
 
-
-def
