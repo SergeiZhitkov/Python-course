@@ -8,10 +8,10 @@ def value(greeting):
     greeting = greeting.lower().strip()
     words = []
     words = greeting.split(" ")
-    word[0] = word[0].replace(",", "")
-    if word[0] == "hello":
+    words[0] = words[0].replace(",", "")
+    if words[0] == "hello":
         return "$0"
-    elif word[0] == "h":
+    elif words[0][0] == "h":
         return "$20"
     return "$100"
 
