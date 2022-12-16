@@ -1,13 +1,13 @@
 def main():
-    message = input("Enter your message: ").strip()
-    print(omitting_vowels(message))
+    word = input("Enter your message: ").strip()
+    print(shorten(word))
 
 
 
 
-def omitting_vowels(m):
+def shorten(word):
     ov = ""
-    for letter  in m:
+    for letter  in word:
         if letter not in "aeiouAEIOU":
             ov = ov + letter
     return ov
