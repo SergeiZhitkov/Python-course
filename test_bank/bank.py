@@ -5,6 +5,7 @@ def main():
 
 
 def value(greeting):
+    greeting = greeting.lower().strip()
     hello = ""
     for letter in greeting[0:5]:
         hello = hello + letter
