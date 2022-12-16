@@ -6,12 +6,12 @@ def main():
 
 def value(greeting):
     greeting = greeting.lower().strip()
-    hello = ""
-    for letter in greeting[0:5]:
-        hello = hello + letter
-    if hello == "hello":
+    words = []
+    words = greeting.split(" ")
+    words[0] = words[0].replace(",", "")
+    if words[0] == "hello":
         return "$0"
-    elif hello[0] == "h":
+    elif words[0][0] == "h":
         return "$20"
     return "$100"
 
