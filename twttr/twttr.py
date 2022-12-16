@@ -7,13 +7,14 @@ def main():
 
 
 def shorten(word):
-    if word.is_alpha():
+    if word.isalpha():
         ov = ""
         for letter  in word:
             if letter not in "aeiouAEIOU":
                 ov = ov + letter
         return ov
     else:
+        raise("ValueError")
         sys.exit()
 
 

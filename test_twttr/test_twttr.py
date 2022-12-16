@@ -9,4 +9,5 @@ def test_word_with_upper_vowels():
 
 def test_word_without_vowels():
     assert shorten("Gym") == "Gym"
-
+def test_numbers():
+    with pytest.raises("ValueError")
