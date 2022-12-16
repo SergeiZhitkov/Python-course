@@ -1,4 +1,3 @@
-import sys
 def main():
     word = input("Enter your message: ").strip()
     print(shorten(word))
@@ -7,15 +6,11 @@ def main():
 
 
 def shorten(word):
-    if word.isalpha():
-        ov = ""
-        for letter  in word:
-            if letter not in "aeiouAEIOU":
-                ov = ov + letter
-        return ov
-    else:
-        sys.exit()
-
+    ov = ""
+    for letter  in word:
+        if letter not in "aeiouAEIOU":
+            ov = ov + letter
+    return ov
 
 
 if __name__ == "__main__":
