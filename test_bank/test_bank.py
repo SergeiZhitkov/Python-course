@@ -1,5 +1,10 @@
-import sys
 from bank import value
+def main():
+    test_with_hello()
+    test_with_h()
+    test_without_first_h()
+    test_with_numbers()
+    test_with_punctuations()
 
 
 def test_with_hello():
@@ -19,4 +24,6 @@ def test_with_numbers():
 
 def test_with_punctuations():
     assert value("__Hello, Jhon") == "$100"
-sys.exit(0)
+
+if __name__ == "__main__":
+    main()
