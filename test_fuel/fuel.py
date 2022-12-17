@@ -13,9 +13,10 @@ def convert(f):
         y = int(y)
         if x <= y and y != 0:
             return int(float(x) / float(y) * 100)
-    except (ValueError, ZeroDivisionError):
-        sys.exit()
-
+    except ValueError:
+        sys.exit("ValueError")
+    except ZeroDivisionError:
+        sys.exit("ZeroDivisionError")
 
 
 def gauge(fraction):
