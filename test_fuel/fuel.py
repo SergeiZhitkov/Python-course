@@ -7,17 +7,13 @@ def main():
 
 
 def convert(f):
-    try:
-        x, y = f.split("/")
-        x = int(x)
-        y = int(y)
-        if x <= y and y != 0:
-            return int(float(x) / float(y) * 100)
-    except ValueError:
-        sys.exit("ValueError")
-    except ZeroDivisionError:
-        sys.exit("ZeroDivisionError")
-
+    x, y = f.split("/")
+    x = int(x)
+    y = int(y)
+    if x <= y :
+        return int(float(x) / float(y) * 100)
+    else:
+        raise(ValueError)
 
 def gauge(fraction):
     if fraction >= 99:
