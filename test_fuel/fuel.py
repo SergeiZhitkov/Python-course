@@ -11,7 +11,7 @@ def convert(f):
             x = int(x)
             y = int(y)
             if x <= y and y != 0:
-                return float(x) / float(y) * 100
+                return int(float(x) / float(y) * 100)
         except (ValueError, ZeroDivisionError):
             f = input("Fraction: ").strip()
             pass
