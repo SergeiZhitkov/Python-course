@@ -10,6 +10,8 @@ def convert(f):
     x, y = f.split("/")
     x = int(x)
     y = int(y)
+    if y == 0:
+        raise(ZeroDivisionError)
     if x <= y :
         return int(float(x) / float(y) * 100)
     else:

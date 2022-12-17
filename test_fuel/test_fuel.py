@@ -16,3 +16,7 @@ def test_convert():
 def test_zero_convert():
     with pytest.raises(ZeroDivisionError):
         convert("3/0")
+
+def test_value_error():
+    with pytest.raises(ValueError):
+        convert("3/2")
