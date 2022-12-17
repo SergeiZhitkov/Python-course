@@ -1,3 +1,5 @@
+import sys
+
 def main():
     fraction = input("Fraction: ").strip()
     fraction = convert(fraction)
@@ -5,16 +7,14 @@ def main():
 
 
 def convert(f):
-    while True:
-        try:
-            x, y = f.split("/")
-            x = int(x)
-            y = int(y)
-            if x <= y and y != 0:
-                return int(float(x) / float(y) * 100)
-        except (ValueError, ZeroDivisionError):
-            f = input("Fraction: ").strip()
-            pass
+    try:
+        x, y = f.split("/")
+        x = int(x)
+        y = int(y)
+        if x <= y and y != 0:
+            return int(float(x) / float(y) * 100)
+    except (ValueError, ZeroDivisionError):
+        sys.exit()
 
 
 
