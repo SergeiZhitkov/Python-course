@@ -17,3 +17,8 @@ def test_invalid_len():
     assert is_valid("toolong") == False
     assert is_valid("z") == False
 
+def test_punctuation():
+    assert is_valid("__nice") == False
+
+def test_all_numeric():
+    assert is_valid("12345") == False
