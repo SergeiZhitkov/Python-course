@@ -19,6 +19,8 @@ def test_invalid_len():
 
 def test_punctuation():
     assert is_valid("__nice") == False
+    assert is_valid("AB####") == False
+    assert is_valid("CD^^^^") == False
 
 def test_all_numeric():
     assert is_valid("12345") == False
