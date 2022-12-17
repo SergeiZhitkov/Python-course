@@ -22,3 +22,6 @@ def test_punctuation():
 
 def test_all_numeric():
     assert is_valid("12345") == False
+
+def test_punct():
+    assert is_valid(1234) == False
