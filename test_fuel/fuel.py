@@ -1,14 +1,10 @@
 def main():
     fraction = input("Fraction: ").strip()
-    fraction = percentage(fraction)
-    if fraction >= 99:
-        print("F")
-    elif fraction <= 1:
-        print("E")
-    else:
-        print(f"{fraction:.0f}%")
+    fraction = convert(fraction)
+    print(gauge(fraction))
 
-def percentage(f):
+
+def convert(f):
     while True:
         try:
             x, y = f.split("/")
@@ -19,6 +15,16 @@ def percentage(f):
         except (ValueError, ZeroDivisionError):
             f = input("Fraction: ").strip()
             pass
+
+
+
+def gauge(fraction):
+    if fraction >= 99:
+            return("F")
+    elif fraction <= 1:
+            return("E")
+    else:
+            return(f"{fraction:.0f}%")
 
 
 
