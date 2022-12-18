@@ -1,16 +1,25 @@
 import sys
 
-if sys.argv > 2:
+
+strings = 0
+
+if len(sys.argv) > 2:
     sys.exit("Too many command-line arguments")
-elif sys.argv < 2:
+elif len(sys.argv) < 2:
     sys.exit("Too few command-line arguments")
 
 if sys.argv[1].endswith(".py") == False:
     sys.exit("Not a Python file")
 
-with open(argv[1]) as file:
+with open(sys.argv[1]) as file:
     for line in file:
-        if 
+        line = line.strip()
+        if line != " " and line[0] != "#":
+            strings += 1
+
+print(strings)
+
+
 
 
 
