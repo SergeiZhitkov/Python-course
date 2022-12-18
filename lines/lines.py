@@ -14,7 +14,7 @@ if sys.argv[1].endswith(".py") == False:
 with open(sys.argv[1]) as file:
     for line in file:
         line = line.strip()
-        if line != " " and line[0] != "#":
+        if line != "" and line[0] != "#":
             strings += 1
 
 print(strings)
