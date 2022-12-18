@@ -21,5 +21,6 @@ except FileNotFoundError:
     sys.exit("File does not exist")
 
 with open("after.csv", "w") as file:
-    writer = csv.DictWriter(file, fieldnames=)
-    for row in writer:
+    writer = csv.DictWriter(file, fieldnames=["first", "last", "house"])
+    for row in new_file:
+        writer.writerow({"first" : first, "last" : last, "house" : house})
