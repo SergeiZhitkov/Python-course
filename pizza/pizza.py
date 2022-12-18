@@ -16,7 +16,7 @@ try:
     with open(sys.argv[1]) as file:
         reader = csv.reader(file)
         for row in reader:
-            table.append([row])
+            table.append(row)
 except FileNotFoundError:
     sys.exit()
 
