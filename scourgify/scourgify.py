@@ -14,5 +14,12 @@ if sys.argv[1].endswith(".csv") == False:
 try:
     with open(sys.argv[1]) as file:
         reader = csv.DictReader(file)
-        for name, house in reader:
-            new_file.append("name": name, "house": house)
+        for row in reader:
+            first, last = row["name"].split(", ")
+            new_file.append({"first" : first, "last" : last, "house" : house})
+except FileNotFoundError:
+    sys.exit("File does not exist")
+
+with open("after.csv", "w") as file:
+    writer = csv.DictWriter(file, fieldnames=)
+    for row in writer:
