@@ -9,7 +9,7 @@ if sys.argv[1].endswith(".py") == False:
     sys.exit("Not a Python file")
 
 with open(argv[1]) as file:
-    
+    reader = file.readlines()
 
 
 
