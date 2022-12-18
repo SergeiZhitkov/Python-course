@@ -3,9 +3,9 @@ import sys
 
 new_file = []
 
-if len(sys.argv) > 2:
+if len(sys.argv) > 3:
     sys.exit("Too many command-line arguments")
-elif len(sys.argv) < 2:
+elif len(sys.argv) < 3:
     sys.exit("Too few command-line arguments")
 
 if sys.argv[1].endswith(".csv") == False:
@@ -20,7 +20,7 @@ try:
 except FileNotFoundError:
     sys.exit("File does not exist")
 
-with open("after.csv", "w") as file:
+with open(sys.argv[2], "w") as file:
     writer = csv.DictWriter(file, fieldnames=["first", "last", "house"])
     for row in new_file:
         writer.writerow({"first" : row["first"], "last" : row["last"], "house" : row["house"]})
