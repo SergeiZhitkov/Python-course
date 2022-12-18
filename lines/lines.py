@@ -10,13 +10,14 @@ elif len(sys.argv) < 2:
 
 if sys.argv[1].endswith(".py") == False:
     sys.exit("Not a Python file")
-
-with open(sys.argv[1]) as file:
-    for line in file:
-        line = line.strip()
-        if line != "" and line[0] != "#":
-            strings += 1
-
+try:
+    with open(sys.argv[1]) as file:
+        for line in file:
+            line = line.strip()
+            if line != "" and line[0] != "#":
+                strings += 1
+except FileNotFoundError:
+    sys.exit("File does not exist")
 print(strings)
 
 
