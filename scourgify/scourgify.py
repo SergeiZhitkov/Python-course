@@ -16,11 +16,11 @@ try:
         reader = csv.DictReader(file)
         for row in reader:
             first, last = row["name"].split(", ")
-            new_file.append({"first" : first, "last" : last, "house" : house})
+            new_file.append({"first" : first, "last" : last, "house" : row["house"]})
 except FileNotFoundError:
     sys.exit("File does not exist")
 
 with open("after.csv", "w") as file:
     writer = csv.DictWriter(file, fieldnames=["first", "last", "house"])
     for row in new_file:
-        writer.writerow({"first" : first, "last" : last, "house" : house})
+        writer.writerow({"first" : row["first"], "last" : row["last"], "house" : row["house"]})
