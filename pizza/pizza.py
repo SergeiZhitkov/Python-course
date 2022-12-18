@@ -18,6 +18,6 @@ try:
         for row in reader:
             table.append(row)
 except FileNotFoundError:
-    sys.exit()
+    sys.exit("File does not exist")
 
 print(tabulate(table, headers="firstrow", tablefmt="grid"))
