@@ -10,6 +10,8 @@ elif len(sys.argv) < 3:
 
 if sys.argv[1].endswith(".csv") == False:
     sys.exit("Not a CSV file")
+if sys.argv[2].endswith(".csv") == False:
+    sys.argv[2] = sys.argv[2] + ".csv"
 
 try:
     with open(sys.argv[1]) as file:
