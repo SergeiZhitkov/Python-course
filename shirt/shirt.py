@@ -29,8 +29,8 @@ shirt = Image.open("shirt.png")
 
 try:
     with Image.open(sys.argv[1]) as file:
-        ImageOps.fit(file, size=(600, 600))
-        file.paste(file, box=None, mask=shirt)
+        file = ImageOps.fit(file, size=(600, 600))
+        file.paste(file, mask=shirt)
         file.save(sys.argv[2], format=None)
 except FileNotFoundError:
     sys.exit("Input does not exist")
