@@ -32,8 +32,7 @@ try:
 except FileNotFoundError:
      sys.exit("Input does not exist")
 
-x, y = file.size
 
-shirt = ImageOps.fit(shirt, size=(x, y))
-file.paste(file, mask=shirt)
+shirt = ImageOps.fit(shirt, file.size)
+file.paste(shirt, mask=shirt)
 file.save(sys.argv[2])
