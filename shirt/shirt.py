@@ -25,12 +25,12 @@ for file in sys.argv[1:]:
 if end != "+":
     sys.exit("Input and output have different extensions")
 
-
+shirt = Image.open("shirt.png")
 
 try:
     with Image.open(sys.argv[1]) as file:
         ImageOps.fit(file, size=(600, 600))
-        file.paste(file, box=None, mask=None)
+        file.paste(file, box=None, mask=shirt)
         file.save(sys.argv[2], format=None)
 except FileNotFoundError:
     sys.exit("Input does not exist")
