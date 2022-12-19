@@ -29,7 +29,7 @@ shirt = Image.open("shirt.png")
 
 try:
     with Image.open(sys.argv[1]) as file:
-        file = ImageOps.fit(file, size=(600, 600))
+        shirt = ImageOps.fit(file, size=(1200, 1600))
         file.paste(file, mask=shirt)
         file.save(sys.argv[2])
 except FileNotFoundError:
