@@ -9,14 +9,21 @@ elif len(sys.argv) < 3:
     sys.exit("Too few command-line arguments")
 
 i=0
+end = ""
 for file in sys.argv[1:]:
     for extension in extensions:
         i += 1
         if file.endswith(extension) == True:
+            if end == extension:
+                end = end + "+"
+            else:
+                end = extension
             break
         if i == 3:
             sys.exit("Invalid input")
 
+if end != "+":
+    sys.exit("Input and output have different extensions")
 
 
 
