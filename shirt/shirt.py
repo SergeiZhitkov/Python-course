@@ -32,3 +32,5 @@ try:
         PIL.ImageOps.fit(file, method=Resampling.BICUBIC, bleed=0.0, centering=(0.5, 0.5))
         Image.paste(file, box=None, mask=None)
         Image.save(sys.argv[2], format=None)
+except FileNotFoundError:
+    sys.exit("Input does not exist")
