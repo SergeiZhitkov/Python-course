@@ -34,5 +34,5 @@ except FileNotFoundError:
 
 
 file = ImageOps.fit(file, shirt.size)
-file.paste(shirt, mask=shirt)
+file.paste(shirt, shirt)
 file.save(sys.argv[2])
