@@ -34,6 +34,6 @@ except FileNotFoundError:
 
 x, y = file.size
 
-shirt = ImageOps.fit(file, size=(1200, 1600))
-file.paste(file, box=(0,0,x,y),mask=shirt)
+shirt = ImageOps.fit(shirt, size=(x, y))
+file.paste(file, mask=shirt)
 file.save(sys.argv[2])
