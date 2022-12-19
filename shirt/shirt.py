@@ -1,6 +1,6 @@
 import sys
 from PIL import Image, ImageOps
-import PIL
+
 
 extensions = [".jpeg", ".jpg", ".png"]
 if len(sys.argv) > 3:
