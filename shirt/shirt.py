@@ -30,7 +30,7 @@ if end != "+":
 try:
     with Image.open(sys.argv[1]) as file:
         ImageOps.fit(file, size=(3, 4))
-        Image.paste(file, box=None, mask=None)
-        Image.save(sys.argv[2], format=None)
+        file.paste(file, box=None, mask=None)
+        file.save(sys.argv[2], format=None)
 except FileNotFoundError:
     sys.exit("Input does not exist")
