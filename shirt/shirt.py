@@ -13,4 +13,4 @@ for file in sys.argv[1:]:
 
 try:
     with Image.open(sys.argv[1]) as file:
-        PIL.ImageOps.fit(file, size, method=Resampling.BICUBIC, bleed=0.0, centering=(0.5, 0.5))
+        PIL.ImageOps.fit(file, method=Resampling.BICUBIC, bleed=0.0, centering=(0.5, 0.5))
