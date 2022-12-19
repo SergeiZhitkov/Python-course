@@ -1,5 +1,6 @@
 import sys
 import csv
+from PIL import Image
 
 if len(sys.argv) > 3:
     sys.exit("Too many command-line arguments")
