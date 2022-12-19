@@ -1,6 +1,6 @@
 import sys
 import csv
-from PIL import Image
+import PIL
 
 if len(sys.argv) > 3:
     sys.exit("Too many command-line arguments")
@@ -14,3 +14,5 @@ for file in sys.argv[1:]:
 try:
     with Image.open(sys.argv[1]) as file:
         PIL.ImageOps.fit(file, method=Resampling.BICUBIC, bleed=0.0, centering=(0.5, 0.5))
+        Image.paste(file, box=None, mask=None)
+        Image.save(fp, format=None, **params)
