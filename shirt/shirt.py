@@ -28,9 +28,10 @@ if end != "+":
 shirt = Image.open("shirt.png")
 
 try:
-    with Image.open(sys.argv[1]) as file:
-        shirt = ImageOps.fit(file, size=(1200, 1600))
-        file.paste(file, mask=shirt)
-        file.save(sys.argv[2])
+    file = Image.open(sys.argv[1])
 except FileNotFoundError:
-    sys.exit("Input does not exist")
+     sys.exit("Input does not exist")
+
+shirt = ImageOps.fit(file, size=(1200, 1600))
+file.paste(file, mask=shirt)
+file.save(sys.argv[2])
