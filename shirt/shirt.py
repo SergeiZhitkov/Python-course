@@ -29,7 +29,7 @@ if end != "+":
 
 try:
     with Image.open(sys.argv[1]) as file:
-        ImageOps.fit(file, size=(300, 400))
+        ImageOps.fit(file, size=(600, 600))
         file.paste(file, box=None, mask=None)
         file.save(sys.argv[2], format=None)
 except FileNotFoundError:
