@@ -1,6 +1,7 @@
 import sys
 import csv
 import PIL
+from PIL import Image
 
 extensions = [".jpeg", ".jpg", ".png"]
 if len(sys.argv) > 3:
@@ -15,11 +16,11 @@ for file in sys.argv[1:]:
         i += 1
         if file.endswith(extension) == True:
             if end == extension:
-                end = end + "+"
+                end =  "+"
             else:
                 end = extension
             break
-        if i == 3:
+        if i == 4:
             sys.exit("Invalid input")
 
 if end != "+":
