@@ -1,7 +1,5 @@
 import sys
-import csv
-import PIL
-from PIL import Image
+from PIL import Image, ImageOps
 
 extensions = [".jpeg", ".jpg", ".png"]
 if len(sys.argv) > 3:
@@ -30,7 +28,7 @@ if end != "+":
 
 try:
     with Image.open(sys.argv[1]) as file:
-        PIL.ImageOps.fit(file, method=Resampling.BICUBIC, bleed=0.0, centering=(0.5, 0.5))
+        ImageOps.fit(file, method=Resampling.BICUBIC, bleed=0.0, centering=(0.5, 0.5))
         Image.paste(file, box=None, mask=None)
         Image.save(sys.argv[2], format=None)
 except FileNotFoundError:
