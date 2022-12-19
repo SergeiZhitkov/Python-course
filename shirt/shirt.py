@@ -1,5 +1,6 @@
 import sys
 from PIL import Image, ImageOps
+import PIL
 
 extensions = [".jpeg", ".jpg", ".png"]
 if len(sys.argv) > 3:
@@ -28,7 +29,7 @@ if end != "+":
 
 try:
     with Image.open(sys.argv[1]) as file:
-        ImageOps.fit(file, method=Resampling.BICUBIC, bleed=0.0, centering=(0.5, 0.5))
+        ImageOps.fit(file, size=(3, 4))
         Image.paste(file, box=None, mask=None)
         Image.save(sys.argv[2], format=None)
 except FileNotFoundError:
