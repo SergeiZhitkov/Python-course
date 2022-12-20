@@ -7,10 +7,12 @@ def main():
 
 
 def validate(ip):
-    if ip := re.search(r"^\.([1-2][0-5]|[1-9])?[0-9]$")
+    if ip := re.search(r"^[0-255]\.[0-255]\.[0-255]\.[0-255]$", ip):
+        return True
+    else:
+        return False
 
 
-...
 
 
 if __name__ == "__main__":
