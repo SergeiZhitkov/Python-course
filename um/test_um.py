@@ -8,3 +8,4 @@ def test_um():
     assert count("hello,um,ok,um") == 2
     assert count("copium") == 0
     assert count("ferg") == 0
+    assert count("...um") == 1
