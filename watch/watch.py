@@ -7,10 +7,10 @@ def main():
 
 
 def parse(s):
-    ...
+    if s := re.search(r"https?(ww\.)?://youtube.com/embed/", s, flag=RE.IGNORCASE):
 
 
-...
+
 
 
 if __name__ == "__main__":
