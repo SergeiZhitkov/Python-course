@@ -7,10 +7,9 @@ def main():
 
 
 def count(s):
-    ...
+    matches = re.findall(" *(.|,)*um(.|,)* *", s, re.IGNORECASE)
+    return len(matches)
 
-
-...
 
 
 if __name__ == "__main__":
