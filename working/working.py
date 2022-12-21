@@ -42,16 +42,22 @@ def main():
 def convert(s):
     if matches := re.search(r"^(1[0-2]|1[0-2]:[0-5][0-9]|[1-9]|[1-9]:[0-5][0-9]) (am|pm) to (1[0-2]|1[0-2]:[0-5][0-9]|[1-9]|[1-9]:[0-5][0-9]) (am|pm)$", s.strip(), flags=re.IGNORECASE):
         try:
-            hour, minute = matches.group(1).split(":")
-            hour = time[matches.group(2)][hour]
+            first_hour, minutes = matches.group(1).split(":")
+            first_hour = time[matches.group(2)][first_hour]
+            first_hour = first_hour + ":" + minutes
         except ValueError:
+            first_hour = time[matches.group(2)][first_hour]
+            first_hour = first_hour + ":00"
             pass
-        
-
-
-        matches.group(3)
-        matches.group(4)
-
+       try:
+            second_hour, minutes = matches.group(3).split(":")
+            second_hour = time[matches.group(4)][second_hour]
+            second_hour = second_hour + ":" + minutes
+        except ValueError:
+            second_hour = time[matches.group(4)][second_hour]
+            second_hour = second_hour + ":00"
+            pass
+        return f"{first_hour} to {second_hour}"
     else:
         raise ValueError
 
