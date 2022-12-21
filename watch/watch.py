@@ -10,7 +10,7 @@ def parse(s):
     if s := re.search(r'"https?(?:www\.)?://youtube\.com/embed/(\w)"$', s, flag=RE.IGNORCASE):
         return s
     else:
-        sys.exit("")
+        return None
 
 
 
