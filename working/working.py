@@ -2,7 +2,7 @@ import re
 import sys
 
 time = {
-    "am" : {
+    "AM" : {
         "12" : "00",
         "1" : "01",
         "2" : "02",
@@ -16,7 +16,7 @@ time = {
         "10" : "10",
         "11" : "11",
     },
-    "pm" : {
+    "PM" : {
         "12" : "12",
         "1" : "13",
         "2" : "14",
@@ -38,12 +38,12 @@ def main():
 
 
 def convert(s):
-    if matches := re.search(r"^(1[0-2]|1[0-2]:[0-5][0-9]|[1-9]|[1-9]:[0-5][0-9]) (am|pm) to (1[0-2]|1[0-2]:[0-5][0-9]|[1-9]|[1-9]:[0-5][0-9]) (am|pm)$", s.strip(), flags=re.IGNORECASE):
+    if matches := re.search(r"^(1[0-2]|1[0-2]:[0-5][0-9]|[1-9]|[1-9]:[0-5][0-9]) (AM|PM) to (1[0-2]|1[0-2]:[0-5][0-9]|[1-9]|[1-9]:[0-5][0-9]) (AM|PM)$", s.strip(), flags=re.IGNORECASE):
         try:
             first_hour, minutes = matches.group(1).split(":")
             first_hour = time[matches.group(2)][first_hour]
             first_hour = first_hour + ":" + minutes
-        except ValueError:
+        except UnboundLocalError:
             first_hour = time[matches.group(2)][first_hour]
             first_hour = first_hour + ":00"
             pass
@@ -51,7 +51,7 @@ def convert(s):
             second_hour, minutes = matches.group(3).split(":")
             second_hour = time[matches.group(4)][second_hour]
             second_hour = second_hour + ":" + minutes
-        except ValueError:
+        except UnboundLocalError:
             second_hour = time[matches.group(4)][second_hour]
             second_hour = second_hour + ":00"
             pass
