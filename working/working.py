@@ -7,8 +7,12 @@ def main():
 
 
 def convert(s):
-    if s := re.search(r"^(1[0-2]|1[0-2]:[0-5][0-9]|[1-9]|) (am|pm) to (1[0-2]|[1-9])(am|pm)$", s, flags=re.IGNORECASE):
-        return
+    if matches := re.search(r"^(1[0-2]|1[0-2]:[0-5][0-9]|[1-9]|[1-9]:[0-5][0-9]) (am|pm) to (1[0-2]|1[0-2]:[0-5][0-9]|[1-9]|[1-9]:[0-5][0-9])(am|pm)$", s, flags=re.IGNORECASE):
+        if matches.group(2) == "am":
+            
+        matches.group(3)
+        matches.group(4)
+
     else:
         raise ValueError
 
