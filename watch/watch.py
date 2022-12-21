@@ -7,7 +7,7 @@ def main():
 
 
 def parse(s):
-    match = re.sub(r"^\"https?(?:www\.)?://youtube\.com/embed/(\w+)\"$", s, flags=re.IGNORECASE)
+    match = re.search(r"^\"https?(?:www\.)?://youtube\.com/embed/\"$", s, flags=re.IGNORECASE)
     return match
 
 
