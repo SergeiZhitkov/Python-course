@@ -43,16 +43,16 @@ def convert(s):
             first_hour, minutes = matches.group(1).split(":")
             first_hour = time[matches.group(2)][first_hour]
             first_hour = first_hour + ":" + minutes
-        except (UnboundLocalError, ValueError):
-            first_hour = time[matches.group(2)][first_hour]
+        except ValueError:
+            first_hour = time[matches.group(2)][matches.group(1)]
             first_hour = first_hour + ":00"
             pass
         try:
             second_hour, minutes = matches.group(3).split(":")
             second_hour = time[matches.group(4)][second_hour]
             second_hour = second_hour + ":" + minutes
-        except (UnboundLocalError, ValueError):
-            second_hour = time[matches.group(4)][second_hour]
+        except ValueError:
+            second_hour = time[matches.group(4)][matches.group(3)]
             second_hour = second_hour + ":00"
             pass
         return f"{first_hour} to {second_hour}"
