@@ -7,8 +7,10 @@ def main():
 
 
 def parse(s):
-    if s := re.search(r"https?(ww\.)?://youtube.com/embed/", s, flag=RE.IGNORCASE):
-
+    if s := re.search(r'"https?(?:www\.)?://youtube\.com/embed/(\w)"$', s, flag=RE.IGNORCASE):
+        return s
+    else:
+        sys.exit("")
 
 
 
