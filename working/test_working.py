@@ -14,7 +14,9 @@ def test_without_minutes:
     assert convert("10 PM to 6 AM") == "22:00 to 06:00"
 
 def test_value_error():
-    with pytest.raises(ValueError)
-    
+    with pytest.raises(ValueError):
+        convert("sdvv")
+        convert("12:60 PM to 2:00 AM")
+
 
 
