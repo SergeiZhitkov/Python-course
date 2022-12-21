@@ -21,7 +21,7 @@ def test_value_error():
     with pytest.raises(ValueError):
         convert("12:50 PM  2:00 AM")
     with pytest.raises(ValueError):
-        convert("12:50 PM  2:00 AM")
+        convert("12:50 to 2:00 AM")
 
 
 
