@@ -7,7 +7,7 @@ def main():
 
 
 def count(s):
-    matches = re.findall(r"(\w*\W+|)um(\W+\w*|)", s, re.IGNORECASE)
+    matches = re.findall(r"^(\w+\W+||\W+)um(\W+\w*|)$", s, re.IGNORECASE)
     return len(matches)
 
 
