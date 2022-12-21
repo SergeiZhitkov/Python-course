@@ -47,7 +47,7 @@ def convert(s):
             first_hour = time[matches.group(2)][first_hour]
             first_hour = first_hour + ":00"
             pass
-       try:
+        try:
             second_hour, minutes = matches.group(3).split(":")
             second_hour = time[matches.group(4)][second_hour]
             second_hour = second_hour + ":" + minutes
