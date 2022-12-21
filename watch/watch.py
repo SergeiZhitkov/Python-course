@@ -7,8 +7,8 @@ def main():
 
 
 def parse(s):
-    match = re.search(r"^\"https?://(?:www\.)?youtube\.com/embed/\"$", s, flags=re.IGNORECASE)
-    return match
+    match = re.search(r"^.*\"https?://(?:www\.)?youtube\.com/embed/(\w+)\".*$", s, flags=re.IGNORECASE)
+    return match.group(1)
 
 
 
