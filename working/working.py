@@ -7,7 +7,10 @@ def main():
 
 
 def convert(s):
-   
+    if s := re.search(r"() (?:am|pm)? to ()(?:am|pm)?$", s, flags=re.IGNORECASE):
+        return
+    else:
+        raise ValueError
 
 
 
