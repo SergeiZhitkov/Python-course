@@ -7,7 +7,7 @@ def main():
 
 
 def parse(s):
-    if s := re.search(r'"https?(?:www\.)?://youtube\.com/embed/(\w)"$', s, flag=RE.IGNORCASE):
+    if s := re.search(r'"https?(?:www\.)?://youtube\.com/embed/(\w)"$', s, flag=re.IGNORECASE):
         return s
     else:
         return None
