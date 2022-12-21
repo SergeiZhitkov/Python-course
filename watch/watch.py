@@ -10,7 +10,7 @@ def parse(s):
     if match := re.search(r"^.*\"https?://(?:www\.)?youtube\.com/embed/(\w+)\".*$", s, flags=re.IGNORECASE):
         return "https://youtu.be/" + match.group(1)
     else:
-        sys.exit("")
+        return None
 
 
 if __name__ == "__main__":
