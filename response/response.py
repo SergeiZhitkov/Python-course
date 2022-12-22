@@ -1,5 +1,4 @@
 from validator_collection import validators, errors
-import sys
 
 email_address = input("What's your email address? ").strip().lower()
 try:
