@@ -1,7 +1,9 @@
-from validator_collection import validators
+from validator_collection import validators, errors
+import sys
 
 email_address = input("What's your email address? ").strip().lower()
-if email_address := validators.email(email_address):
+try:
+    email_address = validators.email(email_address)
     print("Valid")
-else:
-    print("Invalid")
+except errors.InvalidEmailError:
+    sys.exit("Invalid")
