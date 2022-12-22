@@ -6,4 +6,5 @@ try:
     email_address = validators.email(email_address)
     print("Valid")
 except errors.InvalidEmailError:
-    sys.exit("Invalid")
+    print("Invalid")
+    pass
