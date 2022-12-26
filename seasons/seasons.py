@@ -7,9 +7,11 @@ def main():
 
 
 def how_many_minutes(s):
-    year, month, day = s.split("-")
-    year = int(year)
-
+    try:
+        year, month, day = int(s.split("-"))
+    except ValueError:
+        sys.exit("Invalid date")
+    s = 
 
 
 
