@@ -6,7 +6,7 @@ p = inflect.engine()
 
 def main():
     print(how_many_minutes(input("Date of Birth: ")))
-
+    print(date.today())
 
 
 def how_many_minutes(s):
