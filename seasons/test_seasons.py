@@ -1,7 +1,7 @@
 import pytest
 from seasons import how_many_minutes
 def test_valid_date():
-    assert how_many_minutes("2001-09-03") == "sixteen billion, one hundred forty million, nine hundred two thousand, four hundred minutes"
+    assert how_many_minutes("2001-09-03") == "Eleven million, two hundred eight thousand, nine hundred sixty minutes"
     assert how_many_minutes("2022-12-26") == "zero minutes"
 
 def test_invalid_date():
