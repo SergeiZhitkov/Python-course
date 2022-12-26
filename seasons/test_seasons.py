@@ -8,3 +8,5 @@ def test_invalid_date():
     assert how_many_times("2023.09.03") == "Invalid date"
     assert how_many_times("bgnthm") == "Invalid date"
     assert how_many_times("2022-12-54") == "Invalid date"
+    assert how_many_times("2022-43-05") == "Invalid date"
+    assert how_many_times("2023.09.03") == "Invalid date"
