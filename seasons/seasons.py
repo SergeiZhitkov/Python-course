@@ -13,7 +13,7 @@ def how_many_minutes(s):
         sys.exit("Invalid date")
     s = (date.today() - s) * 24 * 60
     return s.total_seconds() / 60
-
+   
 
 
 
