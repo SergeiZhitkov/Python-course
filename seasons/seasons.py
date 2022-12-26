@@ -16,6 +16,7 @@ def how_many_minutes(s):
         sys.exit("Invalid date")
     s = (date.today() - s) * 24 * 60
     s =  s.total_seconds() / 60
+    s = f{}
     return p.number_to_words(s, andword="")
 
 
