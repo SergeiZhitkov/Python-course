@@ -8,10 +8,10 @@ def main():
 
 def how_many_minutes(s):
     try:
-        year, month, day = int(s.split("-"))
+        s = date.fromisoformat(s)
     except ValueError:
         sys.exit("Invalid date")
-    s = 
+
 
 
 
