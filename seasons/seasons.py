@@ -11,6 +11,8 @@ def how_many_minutes(s):
         s = date.fromisoformat(s)
     except ValueError:
         sys.exit("Invalid date")
+    return (date.today() - s) * 24 * 60
+
 
 
 
