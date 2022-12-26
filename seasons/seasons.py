@@ -14,7 +14,7 @@ def how_many_minutes(s):
     except ValueError:
         sys.exit("Invalid date")
     s = (date.today() - s) * 24
-    s =  int(s.total_seconds() / 60)
+    s =  int(s.total_seconds())
     return p.number_to_words(s, andword="") + " minutes"
 
 
