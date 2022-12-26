@@ -5,8 +5,13 @@ def test_valid_date():
     assert how_many_minutes("2022-12-26") == "zero"
 
 def test_invalid_date():
-    assert how_many_times("2023.09.03") == "Invalid date"
-    assert how_many_times("bgnthm") == "Invalid date"
-    assert how_many_times("2022-12-54") == "Invalid date"
-    assert how_many_times("2022-43-05") == "Invalid date"
-    assert how_many_times("2023.09.03") == "Invalid date"
+    with pytest.raises(ValueError):
+        how_many_minutes("2023.09.03")
+    with pytest.raises(ValueError):
+        how_many_minutes("bgnthm")
+    with pytest.raises(ValueError):
+        how_many_minutes("2022-12-54")
+    with pytest.raises(ValueError):
+        how_many_minutes("2022-43-05")
+    with pytest.raises(ValueError):
+        how_many_minutes("100000-02-03")
