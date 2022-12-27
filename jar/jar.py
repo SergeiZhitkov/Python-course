@@ -1,7 +1,7 @@
 class Jar:
-    def __init__(self, capacity, size):
+    def __init__(self, capacity):
         self.capacity = capacity
-        self.size = size
+
     def __str__(self):
         return f"🍪 * {self.size}"
 
@@ -17,27 +17,27 @@ class Jar:
 
     @property
     def capacity(self):
-        return self._capacity
+        return self.capacity
 
     @capacity.setter
     def capacity(self, capacity):
         if capacity != int(capacity) or capacity < 0:
             raise ValueError("Invalid input")
-        self._capacity = capacity
+        self.capacity = capacity
 
     @property
     def size(self):
-        return self._size
+        return self.size
 
     @size.setter
     def size(self, size):
         if size != int(size) or size > self.capacity or size < 0:
             raise ValueError("Invalid input")
-        self._size = size
+        self.size = size
 
     @classmethod
     def get(cls):
-        capacity = input("Capacity: ")
+        capacity = int(input("Capacity: "))
         return cls(capacity)
 
 def main():
