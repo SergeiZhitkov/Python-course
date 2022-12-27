@@ -1,12 +1,15 @@
 class Jar:
-    def __init__(self, capacity=12, n):
-        self.capacity = capasity
+    def __init__(self, capacity=12):
+        self.capacity = capacity
 
     def __str__(self):
-        return "🍪" * self.n
+        return "🍪" * self.size
 
     def deposit(self, n):
-        capas
+        self.n = n
+        if self.size + self.n > capacity:
+            raise ValueError("Invalid input")
+        self.size = self.size + n
 
     def withdraw(self, n):
         ...
