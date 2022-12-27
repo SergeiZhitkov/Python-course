@@ -8,6 +8,7 @@ class Jar:
     def deposit(self, n):
         self.n = n
         self.size = self.size + n
+        
 
     def withdraw(self, n):
         self.n = n
