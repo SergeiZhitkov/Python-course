@@ -16,17 +16,23 @@ class Jar:
 
     @property
     def capacity(self):
-        return self.capasity
+        return self.capacity
 
-    @capasity.setter
-    def capacity(self, capasity):
-        if capacity != int(capasity) or capasity < 0:
+    @capacity.setter
+    def capacity(self, capacity):
+        if capacity != int(capacity) or capacity < 0:
             raise ValueError("Invalid input")
-        self.capasity = capasity
+        self.capacity = capacity
 
     @property
     def size(self):
         return self.size
+
+    @size.setter
+    def size(self, size):
+        if size != int(size) or size > self.capacity or < 0:
+            raise ValueError("Invalid input")
+        self.size = size
 
 def main():
     try:
