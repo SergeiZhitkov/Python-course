@@ -7,32 +7,33 @@ class Jar:
 
     def deposit(self, n):
         self.n = n
-        if self.size + self.n > capacity:
+        if self.size + n > self.capacity:
             raise ValueError("Invalid input")
         self.size = self.size + n
 
     def withdraw(self, n):
-        ...
+        if
+        self.n = n
 
     @property
     def capacity(self):
-        return self.capacity
+        return self._capacity
 
     @capacity.setter
     def capacity(self, capacity):
         if capacity != int(capacity) or capacity < 0:
             raise ValueError("Invalid input")
-        self.capacity = capacity
+        self._capacity = capacity
 
     @property
     def size(self):
-        return self.size
+        return self._size
 
     @size.setter
     def size(self, size):
         if size != int(size) or size > self.capacity or < 0:
             raise ValueError("Invalid input")
-        self.size = size
+        self._size = size
 
 def main():
     try:
