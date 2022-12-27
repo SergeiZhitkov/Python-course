@@ -35,19 +35,14 @@ class Jar:
             raise ValueError("Invalid input")
         self._size = size
 
-def main():
-    try:
-        Jar.capacity = input("Capasity of jar: ")
-    except ValueError:
-        print("Kek")
-    try:
-        Jar.deposit = int(input("Add cookies: "))
-    except ValueError:
-        print("Kek")
-    Jar.withdraw = int(input("Remove cookies: "))
-    jar = Jar()
-    print(jar.size)
+    @classmethod
+    def get(cls):
+        capacity = input("Capacity: ")
+        return cls(capacity)
 
+def main():
+    jar = Jar.get()
+    print(jar)
 
 
 
