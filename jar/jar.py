@@ -1,24 +1,26 @@
 class Jar:
-    def __init__(self, capasity, cookies):
+    def __init__(self, capasity, deposit, withdraw):
         if capasity != int(capasity) or capasity < 0:
             raise ValueError("Invalid input")
+        if deposit != int(deposit) or capasity < deposit or deposit < 0:
+            raise ValueError("Invalid input")
+        if withdraw != int(withdraw) or withdraw > deposit or withdraw < 0:
+            raise ValueError("Invalid input")
         self.capasity = capasity
-        self.cookies = cookies
-
-    def deposit():
-
+        self.deposit = deposit
+        self.withdraw = withdraw
 
 
     def __str__(self):
-        return "🍪" * self.cookies
+        return "🍪" * self.deposit
 
 def main():
     try:
         self.capasity = input("Capasity of jar: ")
     except ValueError:
-        
+
     try:
-        self.cookies = input("Cookies: ")
+        self.deposit = input("Cookies: ")
     except ValueError:
 
 
