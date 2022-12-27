@@ -5,7 +5,8 @@ class Jar:
         self.capasity = capasity
         self.cookies = cookies
 
-    def __str__(self, cookies)
+    def __str__(self):
+        return "🍪" * self.cookies
 
 def main():
     try:
