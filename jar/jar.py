@@ -30,7 +30,7 @@ class Jar:
 
     @size.setter
     def size(self, size):
-        if size != int(size) or size > self.capacity or < 0:
+        if size != int(size) or size > self.capacity or size < 0:
             raise ValueError("Invalid input")
         self._size = size
 
@@ -38,13 +38,14 @@ def main():
     try:
         self.capacity = input("Capasity of jar: ")
     except ValueError:
-
+        print("Kek")
     try:
-        self.deposit = input("Add cookies: ")
+        self.deposit = int(input("Add cookies: "))
     except ValueError:
+        print("Kek")
+        self.withdraw = int(input("Remove cookies: "))
 
-        self.withdraw = input("Remove cookies: ")
-
+    print(Jar)
 
 
 
