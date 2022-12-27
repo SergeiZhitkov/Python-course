@@ -1,14 +1,14 @@
 class Jar:
-    def __init__(self, capacity=12):
+    def __init__(self, capacity, size):
         self.capacity = capacity
-
+        self.size = size
     def __str__(self):
         return f"🍪 * {self.size}"
 
     def deposit(self, n):
         self.n = n
         self.size = self.size + n
-        
+
 
     def withdraw(self, n):
         self.n = n
@@ -37,7 +37,7 @@ class Jar:
 
 def main():
     try:
-        Jar.capacity = input("Capasity of jar: ")
+        self.capacity = input("Capasity of jar: ")
     except ValueError:
         print("Kek")
     try:
@@ -45,8 +45,8 @@ def main():
     except ValueError:
         print("Kek")
     Jar.withdraw = int(input("Remove cookies: "))
-
-    print(Jar)
+    jar = Jar()
+    print(jar)
 
 
 
