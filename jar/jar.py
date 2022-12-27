@@ -37,7 +37,7 @@ class Jar:
 
 def main():
     try:
-        self.capacity = input("Capasity of jar: ")
+        Jar.capacity = input("Capasity of jar: ")
     except ValueError:
         print("Kek")
     try:
@@ -46,7 +46,7 @@ def main():
         print("Kek")
     Jar.withdraw = int(input("Remove cookies: "))
     jar = Jar()
-    print(jar)
+    print(jar.size)
 
 
 
