@@ -1,12 +1,12 @@
 class Jar:
-    def __init__(self, capacity=12):
+    def __init__(self, capacity=12, n):
         self.capacity = capasity
 
     def __str__(self):
-        ...
+        return "🍪" * self.n
 
     def deposit(self, n):
-        ...
+        capas
 
     def withdraw(self, n):
         ...
