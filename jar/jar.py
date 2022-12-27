@@ -36,14 +36,14 @@ class Jar:
 
 def main():
     try:
-        self.capacity = input("Capasity of jar: ")
+        Jar.capacity = input("Capasity of jar: ")
     except ValueError:
         print("Kek")
     try:
-        self.deposit = int(input("Add cookies: "))
+        Jar.deposit = int(input("Add cookies: "))
     except ValueError:
         print("Kek")
-        self.withdraw = int(input("Remove cookies: "))
+    Jar.withdraw = int(input("Remove cookies: "))
 
     print(Jar)
 
